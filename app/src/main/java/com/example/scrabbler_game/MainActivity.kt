@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
     private fun submit() {
         val gameId = gameIdEntry.text.toString()
         val serverIP = "" //enter your server IP here
-        val urlString = "http://$serverIP/test_tomcat_4_war_exploded/api/hello-world/getStateById?ID=$gameId"
+        val urlString = "http://$serverIP:8080/test_tomcat_4_war_exploded/api/hello-world/getStateById?ID=$gameId"
 
         CoroutineScope(Dispatchers.IO).launch {
             try {
@@ -49,8 +49,9 @@ class MainActivity : AppCompatActivity() {
                     val inReader = BufferedReader(InputStreamReader(urlConnection.inputStream))
                     val response = StringBuilder()
 
-                    inReader.use { it.readLines().forEach { response.append(it) } }
-
+                    inReader.use { it.readLines().forEach { response.append(it).append("\n") } }
+                    runOnUiThread{val resultTextView = findViewById<TextView>(R.id.resultTextView)
+                        resultTextView.text = response.toString()}
                     // Parse the response as needed
                     // Use Dispatchers.Main to update the UI
 

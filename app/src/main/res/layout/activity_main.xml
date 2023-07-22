@@ -4,30 +4,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="16dp"
+                tools:context=".MainActivity"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
 
-                tools:context=".MainActivity">
-
-    <EditText
-            android:id="@+id/game_id_entry"
+    <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search Game ID"
-            android:inputType="number"
-            android:layout_marginBottom="10dp" />
+            android:layout_centerInParent="true"
+            android:padding="16dp"
+            app:cardElevation="8dp">
 
-    <Button
-            android:id="@+id/submit_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/game_id_entry"
-            android:text="Search" />
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <TextView
-            android:id="@+id/error_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/submit_button"
-            android:textColor="#FF0000"
-            android:layout_marginTop="10dp" />
+            <TextView
+                    android:id="@+id/welcome_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Welcome to the Scrabble Game"
+                    android:textSize="24sp"
+                    android:textColor="#00FF00" />
 
+            <EditText
+                    android:id="@+id/game_id_entry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/welcome_label"
+                    android:hint="Search Game ID"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+            <Button
+                    android:id="@+id/submit_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/game_id_entry"
+                    android:text="Search"
+                    android:backgroundTint="#00FF00" />
+
+            <TextView
+                    android:id="@+id/error_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/submit_button"
+                    android:textColor="#FF0000"
+                    android:layout_marginTop="10dp" />
+
+            <TextView
+                    android:id="@+id/resultTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/error_label"
+                    android:textColor="#00FF19"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
