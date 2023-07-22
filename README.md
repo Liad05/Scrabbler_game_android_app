@@ -15,7 +15,7 @@ To get a copy of the project up and running on your local machine for developmen
 
 ## Screenshots
 
-![App Screenshot](./images/ss.png)
+![App Screenshot](Example_screenshot.png)
 
 ## Built With
 
