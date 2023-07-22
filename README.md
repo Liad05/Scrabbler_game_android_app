@@ -10,8 +10,9 @@ To get a copy of the project up and running on your local machine for developmen
 
 1. Clone the project to your machine
 2. Open the project in your preferred IDE (recommended Android Studio or IntelliJ IDEA)
-3. Build the project
-4. Run the project on an emulator or a real device
+3. Put your server IP address in the local network (IPv4 address) at MainActivity.kt (in app/src/main/java/com/example/scrabbler_game), in the 'submit' function.
+4. Build the project
+5. Run the project on an emulator or a real device
 
 ## Screenshots
 
